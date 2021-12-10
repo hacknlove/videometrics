@@ -32,12 +32,24 @@ new Videoelement(HTMLVideoElement, [config](./defaultConfig.md))
 ```
 
 ## methods and attributes
-### `bulk()`
+### bulk()
 It sends the data and wipes the cache, if succedd.
 
-### `stop()`
+### stop()
 It detaches the event handlers
 
-### `start()`
+### start()
 It attaches the event handlers back. It's called automatically by the constructor.
 Changes in `config.videoEvents` or `config.windowEvents` require `videometrics.stop(); videometrics.start()` to be called, to detach and retach the event handlers.
+
+### processEvent()
+It is the event handler. You can call it manually to simulate events. 
+
+### config
+The config used by the instance
+
+### running
+Boolean that indicates if the instance is handling the events or no.
+
+### videoElement
+the video element used by the instance 

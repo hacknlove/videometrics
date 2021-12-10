@@ -49,25 +49,23 @@ export default function Component() {
 ```
 
 ## Reference
-### Positional
+**Positional**
 ```js
 const [videoRef, instance, setVideoElement] = useVideoMetrics(config, initialVideoElement)
 ``` 
-or
-### Named
+or **Named**
 ```js
 const { videoRef, instance, setVideoElement } = useVideoMetrics(config, initialVideoElement)
 ```
 
-### `config` 
-The configuration object.
+### config 
 [see defaultConfig](./defaultConfig.md)
 
-### `initialVideoElement`
+### initialVideoElement
 If for some reason you have the *DOM element* upfront, you can pass it as second parameter, to speed up things and reduce the refreshes.
 It defaults to null 
 
-### `videoRef`
+### videoRef
 A react ref that you need to pass to the video tag you want to get metrics from.
 
 ### instance
