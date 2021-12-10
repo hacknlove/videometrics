@@ -1,8 +1,12 @@
-import useVideometrics from 'videometrics/useVideometrics';
+import { useVideometrics } from 'videometrics/react';
+import defaultConfig from 'videometrics/defaultConfig';
+import s3 from 'videometrics/s3';
 
 const Home = () => {
 
   const [videoRef] = useVideometrics({
+    ...defaultConfig,
+    ...s3,
     customData: {
       userId: '123',
       videoId: '456',

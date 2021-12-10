@@ -15,24 +15,37 @@
   },
   "exports": {
     "./": "./dist/main.js",
-    "./useVideometrics": "./dist/useVideometrics.js",
+    "./defaultConfig": "./dist/defaultConfig.js",
+    "./react": "./dist/react.js",
     "./s3": "./dist/s3.js",
     "./s3ControllerFactory": "./dist/s3ControllerFactory.js"
   },
+  "files": [
+    "dist/main.js",
+    "dist/defaultConfig.js",
+    "dist/react.js",
+    "dist/s3.js",
+    "dist/s3ControllerFactory.js"
+  ],
   "author": "",
   "license": "ISC",
   "devDependencies": {
     "@aws-sdk/client-s3": "^3.44.0",
+    "@aws-sdk/s3-presigned-post": "^3.44.0",
     "jest": "^27.4.4",
     "parcel": "^2.0.1",
     "react": "^17.0.2"
   },
   "peerDependencies": {
     "@aws-sdk/client-s3": "^3.44.0",
+    "@aws-sdk/s3-presigned-post": "^3.44.0",
     "react": "^17.0.2"
   },
   "peerDependenciesMeta": {
     "react": {
+      "optional": true
+    },
+    "aws-sdk/s3-presigned-post": {
       "optional": true
     },
     "@aws-sdk/client-s3": {
@@ -50,8 +63,17 @@
       "sourceMap": false,
       "outputFormat": "esmodule"
     },
-    "useVideometrics": {
-      "source": "src/useVideometrics.js",
+    "defaultConfig": {
+      "source": "src/defaultConfig.js",
+      "distDir": "./dist",
+      "isLibrary": true,
+      "context": "node",
+      "optimize": true,
+      "sourceMap": false,
+      "outputFormat": "esmodule"
+    },
+    "react": {
+      "source": "src/react.js",
       "distDir": "./dist",
       "isLibrary": true,
       "context": "node",

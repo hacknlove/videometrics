@@ -6,7 +6,7 @@ import {
 } from "react"
 import VideoMetrics from "./main"
 
-export default function useVideometrics(config, initialVideoElement = null) {
+export function useVideometrics(config, initialVideoElement = null) {
   const [videoElement, setVideoElement] = useState(initialVideoElement);
 
   const videoRef = useCallback(node => {
@@ -14,7 +14,7 @@ export default function useVideometrics(config, initialVideoElement = null) {
       setVideoElement(node)
     }
   }, []);
-  console.log('refresh', videoElement, config)
+
   const instance = useMemo(
     () => videoElement && new VideoMetrics(videoElement, config)
     , [videoElement, config]

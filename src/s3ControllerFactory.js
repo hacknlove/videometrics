@@ -1,10 +1,11 @@
 import { S3Client } from '@aws-sdk/client-s3'
+import { createPresignedPost } from '@aws-sdk/s3-presigned-post'
 
 export default async function withS3(config) {
-  const s3Client = new S3Client({ region: "eu-west-3", 
+  const s3Client = new S3Client({ region: config.region, 
     credentials: {
       accessKeyId: config.accessKeyId,
-      secretAccessKey: process.env.MY_AWS_SECRET_ACCESS_KEY
+      secretAccessKey: config.secretAccessKey
     }
   });
 
@@ -25,7 +26,7 @@ export default async function withS3(config) {
         Fields: {
           acl: config.acl ?? 'private'
         },
-        Expires: config.Expires
+        Expires: config.Expires ?? 3600
       });
 
       res.json(upload);
