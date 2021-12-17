@@ -49,9 +49,8 @@ export default class VideoMetrics {
     localStorage.setItem('videometrics-last-index', lastIndex + 1)
     localStorage.setItem(`videometrics-${lastIndex}`, newItem)
   
-  
     if (
-      lastIndex > this.config.bulkSize ||
+      lastIndex + 1 >= this.config.bulkSize ||
       (
         lastSend + this.config.interval < Date.now())
       ) {

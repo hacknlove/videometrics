@@ -7,7 +7,7 @@ export default {
       },
       body: JSON.stringify(instance.config.customData),
       credentials: 'include',
-    }).them(res => res.json())
+    }).then(res => res.json())
   },
   async send (instance, bulk) {
     const signature = await instance.config.getSignature(instance)

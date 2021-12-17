@@ -1,7 +1,7 @@
 import { S3Client } from '@aws-sdk/client-s3'
 import { createPresignedPost } from '@aws-sdk/s3-presigned-post'
 
-export default async function withS3(config) {
+export default function withS3(config) {
   const s3Client = new S3Client({ region: config.region, 
     credentials: {
       accessKeyId: config.accessKeyId,

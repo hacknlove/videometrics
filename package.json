@@ -11,7 +11,7 @@
   "scripts": {
     "watch": "parcel watch",
     "build": "parcel build",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "jest"
   },
   "exports": {
     "./": "./dist/main.js",
@@ -35,9 +35,13 @@
     "@aws-sdk/client-s3": "^3.44.0",
     "@aws-sdk/credential-provider-cognito-identity": "^3.43.0",
     "@aws-sdk/s3-presigned-post": "^3.44.0",
+    "@swc/jest": "^0.2.15",
+    "@testing-library/react-hooks": "^7.0.2",
     "jest": "^27.4.4",
+    "jest-fetch-mock": "^3.0.3",
     "parcel": "^2.0.1",
-    "react": "^17.0.2"
+    "react": "^17.0.2",
+    "react-test-renderer": "^17.0.2"
   },
   "peerDependencies": {
     "@aws-sdk/client-cognito-identity": "^3.43.0",
