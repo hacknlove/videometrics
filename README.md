@@ -1,8 +1,8 @@
 # videometrics
 
-videometrics is a framework agsnostic and very configurable javascript library to collect user behaviour regarding video visualization and upload it as slightly formated but mostly raw data in bulks. 
+videometrics is a framework-agsnostic and fully configurable javascript library to collect user behaviour regarding video visualization and upload it in bulks. 
 
-It is composed by a dependence-less small main engine, and a small set of plugins to make things easier for us, the developer.
+It is composed by a dependence-less engine, and a set of wrappers, factories and configuration helpers to make things easier for us, the developer.
 
 The provided plugins are:
 * defaultConfiguration: A provided starting point for your configurations.
@@ -11,8 +11,7 @@ The provided plugins are:
 * kinesis: client side helpers to send the data to kinesis
 * s3ControllerFactory: serverside helper to create the API endpoit that creates s3 upload signatures
 
-To further information, look at the specific READMEs
-
+## More help:
 * [main](./src/main.md)
 * [defaultConfig](./src/defaultConfig.md)
 * [react](./src/react.md)
